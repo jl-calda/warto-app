@@ -22,7 +22,7 @@ const RoomSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export const RoomModel = mongoose.model("Room", Schema);
+export const RoomModel = mongoose.model("Room", RoomSchema);
 
 export const getRooms = () => RoomModel.find();
 

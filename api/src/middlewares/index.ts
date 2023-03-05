@@ -21,7 +21,7 @@ export const isAuthenticated = async (
       return res.sendStatus(403);
     }
 
-    merge(req, { user: existingUser });
+    merge(req, { identity: existingUser });
 
     return next();
   } catch (error) {
@@ -36,6 +36,7 @@ export const isOwner = async (
   next: express.NextFunction
 ) => {
   try {
+    //:id is a placeholder for the id of the user
     const { id } = req.params;
     const currentUserId = get(req, "identity._id") as string;
 

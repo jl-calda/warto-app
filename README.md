@@ -1,1 +1,0 @@
-# warto-app

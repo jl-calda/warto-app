@@ -2,12 +2,14 @@ import mongoose from "mongoose";
 
 const RoomSchema = new mongoose.Schema(
   {
-    user: {
+    userId: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "User",
     },
     title: { type: String, required: true },
+    images: [{ type: String }],
+    status: { type: String, required: true },
     description: { type: String, required: true },
     price: { type: Number, required: true },
     currency: { type: String, required: true },

@@ -20,7 +20,6 @@ export const deleteUser = async (
   res: express.Response
 ) => {
   try {
-    //req is from middleware
     const { id } = req.params;
     const deletedUser = await deleteUserById(id);
     return res.json(deletedUser);
@@ -35,9 +34,8 @@ export const updateUser = async (
 ) => {
   try {
     const { id } = req.params;
-    console.log(req.body);
     const { username, avatar } = req.body;
-
+    console.log(req);
     if (!username) {
       return res.sendStatus(400);
     }

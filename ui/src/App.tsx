@@ -2,6 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Dashboard from "./pages/Dashboard";
 import PostPage from "./pages/PostPage";
+import Register from "./pages/Register";
+
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import PostRoom from "./pages/PostRoom";
 
 const App = () => {
   return (
@@ -10,7 +17,8 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/post" element={<PostPage />} />
+          <Route path="/post" element={<PostRoom />} />
+          <Route path="register" element={<Register />} />
         </Routes>
       </Router>
     </main>

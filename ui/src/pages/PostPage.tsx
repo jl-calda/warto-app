@@ -3,6 +3,7 @@ import { AsyncTypeahead } from "react-bootstrap-typeahead";
 import "react-bootstrap-typeahead/css/Typeahead.css";
 import { v4 as uuid } from "uuid";
 import { HiOutlineArrowUpTray } from "react-icons/hi2";
+import InputForm from "../components/InputForm";
 
 const Post = () => {
   const search = useRef(undefined);
@@ -138,6 +139,7 @@ const Post = () => {
               </label>
               <input className={`${inputStyle}`} type="date" id="address" />
             </div>
+            <InputForm label="Price" type="text" id="price" input={""} />
           </div>
         </div>
       </form>
